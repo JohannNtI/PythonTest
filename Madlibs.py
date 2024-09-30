@@ -1,5 +1,7 @@
 import time
 
+print ("hej hopp")
+
 # Introduktion
 print ("Welcome to Madlibs!")
 print ("You're going to be presented with a text on what type of word you are supposed to write in. Colours, verbs, nouns etc. Enjoy!")
