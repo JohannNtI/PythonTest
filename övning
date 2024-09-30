@@ -1,0 +1,8 @@
+mil2 = int(input('mäterställning i dag? '))
+mil1 = int(input('mätarställning för ett år sedan? '))
+if (mil1<mil2):
+    print("fel, mäterställning angiven")
+else: 
+    print('antal körda mil:', mil2 - mil1)
+    liter = float(input('antal liter bensin? '))
+    print(f'förbrukning per mil: {liter/(mil2-mil1):.2f}')
