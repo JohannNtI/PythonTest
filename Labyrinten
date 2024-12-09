@@ -1,0 +1,89 @@
+import time
+
+#Method for dealing with the entrance
+def entrance ():
+    print ("you have entered the dungeon")
+    print ("what do you want to do")
+    answer = input("1) go to the living room \n2) stay here \n")
+
+    if answer == "1":
+        print ("you approach the door ahead and open it")
+        livingroom() 
+    elif answer == "2":
+        print ("you have decided to stay here for a while")
+        entrance()
+
+
+#Manages the livningroom
+def livingroom():
+    print("\nyou have entered the livingroom!")
+    print("\nyou see two doors")
+    print("one infront, sunshine gleams through the window ")
+    print("the other is to your right and a cold draft can be felt")
+    print("Where do you want to go")
+    ans = input("1) back to the previous room \n2) towards the sunshine \n3) check out the cold draft \n4) stay in the room\n")
+
+    if ( ans== "1"):
+        entrance()
+    elif( ans=="2"):
+        print("you peek through")
+        sunshine_room()
+    elif( ans== "3"):
+        print("\nthe draft gets colder as you approach")
+        drafty_room()
+    elif(ans== "4"):
+        print("you take a quick nap") 
+        livingroom()
+
+
+
+#Manages Drafty room
+def drafty_room():
+    print("you grab ahold of the doorknob to the cold drafty room")
+    print("as you enter, you are hit with a penetrating cold")
+    print("the window has been left carelessly open")
+    print("where do you want to go now?")
+    Answer = input("1) jump out of the window and return to the entrance room \n2) return to the livingroom \n3) stay in the room\n")
+    if (Answer == "1"):
+        print("you have jumped out of the window and returned back to the entrance room")
+        print("you are covered in dirt now.")
+        entrance()
+    elif (Answer == "2"):
+        print("you turn back and return to the livingroom.")
+        livingroom()
+    elif (Answer == "3"):
+        print ("you decide to stand in complete silence for a couple minutes.")
+        time(5)
+        drafty_room()
+
+
+# manages sunshine room
+def sunshine_room():
+    print("\nyour eyes are meet with a strong light as you peek through the window door")
+    print("once you enter the room, your eyes adjust to the industrial strength lightbulb on the ceiling")
+    print("why would anybody buy that?")
+    Response = input("\n1)TURN THAT DAMN LIGHT OFF! \n2) Stay in the room and partially blind yourself. \n3) Return to the livingroom\n")
+    if (Response == "1"):
+        print("\nyou have turned off the light now")
+        print("the room is now pitch black")
+        not_so_sunshine_room()
+    elif (Response =="2"):
+        print("your retinas have been slightly burned due to your insistant staring of the lightbulb.")
+        sunshine_room_partially_blind()
+    elif(Response == "3"):
+        print("")
+
+#alternate narrative for sunshine room
+def not_so_sunshine_room():
+    print("")
+
+# alternate narrative for sunshine room
+def sunshine_room_partially_blind():
+    print("")
+
+
+
+#This will run first
+print ("Welcome to my labyrinth")
+entrance()
+
